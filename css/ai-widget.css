@@ -29,3 +29,47 @@
   #succulent-ai-panel { inset: 8px; width: auto; height: auto; border-radius: 10px; }
   .succulent-ai-bar { flex-wrap: wrap; }
 }
+
+/* Keep the AI floating above the current lesson */
+
+#succulent-ai-widget {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  z-index: 999999 !important;
+}
+
+#succulent-ai-panel {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 85px !important;
+  width: 440px !important;
+  max-width: calc(100vw - 40px) !important;
+  height: min(650px, 75dvh) !important;
+  background: white !important;
+  z-index: 999999 !important;
+}
+
+#succulent-ai-panel[hidden] {
+  display: none !important;
+}
+
+#succulent-ai-panel:not([hidden]) {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+@media (max-width: 600px) {
+  #succulent-ai-widget {
+    right: 12px !important;
+    bottom: 12px !important;
+  }
+
+  #succulent-ai-panel {
+    right: 12px !important;
+    bottom: 75px !important;
+    width: calc(100vw - 24px) !important;
+    max-width: none !important;
+    height: 75dvh !important;
+  }
+}
