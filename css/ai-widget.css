@@ -1,0 +1,31 @@
+/* Floating AI assistant for every course page */
+#succulent-ai-launcher {
+  position: fixed; right: 20px; bottom: 20px; z-index: 1999;
+  background: #2d6a4f; color: #fff; border: 0; border-radius: 999px;
+  padding: 13px 20px; font: 600 16px system-ui, sans-serif;
+  cursor: pointer; box-shadow: 0 5px 20px #0003;
+}
+#succulent-ai-launcher:focus-visible,
+#succulent-ai-panel button:focus-visible,
+#succulent-ai-panel a:focus-visible { outline: 3px solid #f4a261; outline-offset: 3px; }
+#succulent-ai-panel {
+  position: fixed; z-index: 2000; right: 16px; bottom: 78px;
+  width: min(520px, calc(100vw - 32px)); height: min(740px, calc(100dvh - 100px));
+  background: white; border: 1px solid #d8e2dc; border-radius: 14px;
+  overflow: hidden; box-shadow: 0 12px 40px #0003;
+}
+#succulent-ai-panel[hidden] { display: none; }
+.succulent-ai-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 10px 12px; background: #eef7f0;
+  color: #1b4332; font: 14px system-ui, sans-serif;
+}
+.succulent-ai-bar > div { display: flex; align-items: center; gap: 10px; }
+.succulent-ai-bar a { color: #2d6a4f; font-weight: 600; }
+.succulent-ai-bar button { border: 0; border-radius: 6px; background: #2d6a4f; color: white; padding: 8px; cursor: pointer; }
+#succulent-ai-panel iframe { display: block; width: 100%; height: calc(100% - 48px); border: 0; }
+@media (max-width: 600px) {
+  #succulent-ai-launcher { right: 12px; bottom: 12px; }
+  #succulent-ai-panel { inset: 8px; width: auto; height: auto; border-radius: 10px; }
+  .succulent-ai-bar { flex-wrap: wrap; }
+}
