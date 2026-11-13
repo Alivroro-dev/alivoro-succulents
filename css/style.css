@@ -586,3 +586,77 @@ header a {
     padding: 8px 12px;
   }
 }
+
+/* Keep course navigation visible */
+header:has(.site-nav) {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-button {
+  display: inline-block;
+  background: #2d6a4f;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Keep course navigation visible */
+header:has(.site-nav) {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-button {
+  display: inline-block;
+  background: #2d6a4f;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-button {
+    width: 100%;
+    text-align: center;
+  }
+}
