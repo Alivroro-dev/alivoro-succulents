@@ -2,9 +2,7 @@
 /*
  * Succulent Success
  * Floating AI Assistant
- *
- * Opens the existing AI page without leaving
- * the current course lesson.
+ * Works across all course modules.
  */
 
 (function () {
@@ -15,8 +13,9 @@
       return;
     }
 
-    const script = document.currentScript ||
-      document.querySelector('script[src*="ai-widget.js"]');
+    const script = document.querySelector(
+      'script[src*="ai-widget.js"]'
+    );
 
     const scriptURL = script
       ? new URL(script.getAttribute("src"), document.baseURI)
@@ -49,7 +48,7 @@
     const fullLink = document.createElement("a");
     fullLink.href = aiURL;
     fullLink.textContent = "Full AI";
-    fullLink.title = "Open your full AI knowledge library";
+    fullLink.title = "Open full AI knowledge library";
 
     const closeButton = document.createElement("button");
     closeButton.type = "button";
@@ -69,7 +68,7 @@
     document.body.appendChild(widget);
 
     function openAI() {
-      if (!frame.src) {
+      if (!frame.getAttribute("src")) {
         frame.src = frame.dataset.src;
       }
 
@@ -93,6 +92,13 @@
     });
 
     closeButton.addEventListener("click", closeAI);
+
+    // Connect header AI buttons automatically.
+    document.querySelectorAll(
+      ".open-ai-assistant"
+    ).forEach(function (headerButton) {
+      headerButton.addEventListener("click", openAI);
+    });
 
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && !panel.hidden) {
