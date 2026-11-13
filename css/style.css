@@ -541,3 +541,48 @@ header a {
     max-width: 95%;
   }
 }
+
+/* ===== Main navigation ===== */
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.site-brand {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.home-button:hover {
+  background: var(--accent-light);
+}
+
+@media (max-width: 600px) {
+  .site-brand {
+    font-size: 0.85rem;
+  }
+
+  .home-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
