@@ -660,3 +660,14 @@ header:has(.site-nav) {
     text-align: center;
   }
 }
+
+/* Shared course navigation and specialist lessons */
+.lesson-sticky-header {position:sticky;top:0;z-index:1000;margin-bottom:1.25rem;padding:.8rem 1rem;text-align:left;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow)}
+.lesson-nav-actions {display:flex;gap:.6rem;flex-wrap:wrap}
+.lesson-sticky-header .site-nav {display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
+.specialist-extension {margin:2rem 0;padding:1.3rem;background:#f6faf7;border:1px solid var(--border);border-radius:12px}
+.specialist-extension h2 {margin-bottom:.8rem;color:var(--accent)}
+.specialist-extension > p {margin-bottom:1rem}
+.specialist-extension .step {margin:1.2rem 0}
+.specialist-extension a {overflow-wrap:anywhere}
+@media(max-width:600px){.lesson-sticky-header{padding:.6rem}.lesson-sticky-header .site-nav{align-items:stretch;flex-direction:column}.lesson-nav-actions{display:grid;grid-template-columns:1fr 1fr}.lesson-nav-actions .home-button{font-size:.78rem;padding:.5rem;text-align:center}.module-page{padding:1.1rem}.specialist-extension{padding:.85rem}}
