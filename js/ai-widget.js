@@ -22,7 +22,7 @@
       ? new URL(script.getAttribute("src"), document.baseURI)
       : new URL("js/ai-widget.js", document.baseURI);
 
-    const aiURL = new URL("../ai.html", scriptURL).href;
+    const aiURL = new URL("../chat.html", scriptURL).href;
 
     const widget = document.createElement("div");
     widget.id = "succulent-ai-widget";
