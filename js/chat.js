@@ -3,8 +3,7 @@
  * Talks to a Cloudflare Worker that uses Workers AI
  */
 
-const WORKER_URL = "PASTE_YOUR_WORKER_URL_HERE";   // <-- change this after deploying the Worker
-
+const WORKER_URL = "https://succulent-ai.shiny-credit-7871.workers.dev";
 let chatHistory = [];
 
 function initChat() {
